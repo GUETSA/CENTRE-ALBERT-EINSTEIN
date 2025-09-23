@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tous les articles | CENTRE ALBERT EINSTIEN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="Acceuil.html">
+        <img src="FENAP LOGO.png" alt="Logo Centre Albert Einstein" style="height: 60px;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="Acceuil.html">Accueil</a></li>
+        <li><a href="secteurs.html">Secteurs</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Titre principal -->
+  <section class="page-banner parallax">
+    <h1>🗂️ Archives des articles</h1>
+    <p>Retrouvez nos publications classées par secteur et actualité</p>
+  </section>
+
+  <!-- Filtres -->
+  <div class="filters-bar">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="industrie">Industrie</button>
+    <button class="filter-btn" data-filter="agro">Agroalimentaire</button>
+    <button class="filter-btn" data-filter="energie">Énergie</button>
+  </div>
+
+  <!-- Grille d’articles -->
+  <section id="archives" class="articles-masonry">
+
+    <article class="article-card industrie">
+      <img src="images/article-industrie.jpg" alt="Industrie">
+      <div class="card-overlay">
+        <div class="card-tags">
+          <span class="tag">⚙️ Industrie</span>
+          <span class="tag date">10 Juin 2025</span>
+        </div>
+        <h2><a href="articles/industrie-production.html">Nouvelle chaîne de production installée</a></h2>
+        <p>Notre site industriel s’est doté d’une ligne automatisée de dernière génération pour plus d'efficacité et de sécurité.</p>
+      </div>
+    </article>
+
+    <article class="article-card agro">
+      <img src="images/blog-agro.jpg" alt="Agroalimentaire">
+      <div class="card-overlay">
+        <div class="card-tags">
+          <span class="tag">🌾 Agroalimentaire</span>
+          <span class="tag date">28 Mai 2025</span>
+        </div>
+        <h2><a href="articles/agro-coop.html">Partenariat agricole durable lancé</a></h2>
+        <p>Une collaboration innovante avec des coopératives locales pour une production responsable.</p>
+      </div>
+    </article>
+
+    <article class="article-card energie">
+      <img src="images/blog-energie.jpg" alt="Énergie">
+      <div class="card-overlay">
+        <div class="card-tags">
+          <span class="tag">🔋 Énergie</span>
+          <span class="tag date">12 Avril 2025</span>
+        </div>
+        <h2><a href="articles/energie-solaire.html">Extension du réseau solaire rural</a></h2>
+        <p>35 unités solaires autonomes ont été mises en service dans les zones isolées du pays.</p>
+      </div>
+    </article>
+
+    <!-- Plus d’articles à ajouter ici -->
+
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 [Nom de l’entreprise]. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Script filtre interactif -->
+  <script>
+    const filters = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.article-card');
+
+    filters.forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active')?.classList.remove('active');
+        button.classList.add('active');
+        const filter = button.dataset.filter;
+        cards.forEach(card => {
+          card.style.display =
+            filter === 'all' || card.classList.contains(filter) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
