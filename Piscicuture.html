@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pisciculture | Centre Albert Einstein</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .media-slider {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    .slider-container {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    .slide img, .slide iframe {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #00b894;
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .bg-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./videos/21.jpg'); /* 👉 mets ton image ici */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="Acceuil.html">
+        <img src="videos/FENAP LOGO.png" alt="Logo Centre Albert Einstein" style="height: 60px;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="Acceuil.html">Accueil</a></li>
+        <li><a href="secteurs.html">Secteurs</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Vidéo d’arrière-plan -->
+  <section class="hero-section">
+    <!-- Photo d’arrière-plan -->
+<section class="banner-photo">
+  <div class="bg-photo"></div>
+  <div class="banner-overlay">
+    <h1>Nos Domaines d’Activité</h1>
+    <p>Une vision pluridisciplinaire portée par l'innovation</p>
+  </div>
+</section>
+    <div class="hero-content">
+      <h1>🐟 Pisciculture Moderne</h1>
+      <p>Élevage durable, innovation aquatique et valorisation locale</p>
+      <a href="#galerie" class="cta-button">Voir les médias</a>
+    </div>
+  </section>
+
+  <!-- Présentation -->
+  <section class="sector-description">
+    <h2>Notre engagement piscicole</h2>
+    <p>
+      Le Centre Albert Einstein développe des pratiques piscicoles modernes pour renforcer la sécurité alimentaire, créer des emplois et préserver les ressources aquatiques. Nos projets intègrent des bassins contrôlés, des systèmes de recyclage d’eau, et des partenariats avec les communautés locales.
+    </p>
+    <ul class="highlights">
+      <li>🌊 Bassins d’élevage contrôlés</li>
+      <li>🔁 Systèmes de filtration et recyclage</li>
+      <li>📈 Suivi de croissance et traçabilité</li>
+      <li>🤝 Coopération avec les pisciculteurs locaux</li>
+    </ul>
+  </section>
+
+  <!-- Lecteur multimédia -->
+  <section id="galerie" class="media-slider">
+    <h2>🎬 Nos installations piscicoles</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+
+        <!-- Image Postimages -->
+        <div class="slide">
+          <img src="https://i.postimg.cc/xyz123/bassin-piscicole.jpg" alt="Bassin piscicole">
+        </div>
+
+        <!-- Vidéo YouTube -->
+        <div class="slide">
+          <iframe src="https://www.youtube.com/embed/VID_PISCICULTURE_1" allowfullscreen></iframe>
+        </div>
+
+        <!-- Image Postimages -->
+        <div class="slide">
+          <img src="https://i.postimg.cc/abc456/elevage-tilapia.jpg" alt="Élevage de tilapia">
+        </div>
+
+        <!-- Vidéo YouTube -->
+        <div class="slide">
+          <iframe src="https://www.youtube.com/embed/VID_PISCICULTURE_2" allowfullscreen></iframe>
+        </div>
+
+        <!-- Image Postimages -->
+        <div class="slide">
+          <img src="https://i.postimg.cc/def789/systeme-filtration.jpg" alt="Système de filtration">
+        </div>
+
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Appel à l’action -->
+  <section class="sector-contact">
+    <h2>Intéressé par la pisciculture ?</h2>
+    <p>Nous accompagnons les porteurs de projets piscicoles, les coopératives et les institutions dans la mise en œuvre de solutions durables.</p>
+
+    <div style="height: 100px; background-image: url('https://i.postimg.cc/xyz123/bassin-piscicole.jpg'); background-size: cover; background-position: center; opacity: 0.05;"></div>
+
+    <a href="contact.html#contact-form" class="cta-button">Nous contacter</a>
+  </section>
+
+  <!-- Liens vers autres secteurs -->
+  <section class="sector-nav">
+    <h3>Explorer nos autres secteurs</h3>
+    <div class="sector-links">
+      <a href="agroalimentaire.html">🌾 Agroalimentaire</a>
+      <a href="services.html">🚚 Services</a>
+      <a href="energie.html">🔋 Énergie</a>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Centre Albert Einstein – Pisciculture. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Script du lecteur -->
+  <script>
+document.querySelectorAll('.media-slider').forEach((slider) => {
+  const track = slider.querySelector('.slider-track');
+  const slides = slider.querySelectorAll('.slide');
+  const nextBtn = slider.querySelector('.next');
+  const prevBtn = slider.querySelector('.prev');
+  let index = 0;
+
+  const updateSlide = () => {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+});
+</script>
+</body>
+</html>
