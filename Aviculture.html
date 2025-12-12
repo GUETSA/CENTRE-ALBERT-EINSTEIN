@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aviculture | Centre Albert Einstein</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .media-slider {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    .slider-container {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    .slide img, .slide iframe {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #00b894;
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="Acceuil.html">
+        <img src="videos/FENAP LOGO.png" alt="Logo Centre Albert Einstein" style="height: 60px;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="Acceuil.html">Accueil</a></li>
+        <li><a href="secteurs.html">Secteurs</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Vidéo d’arrière-plan -->
+  <section class="hero-section">
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="videos/aviculture.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+    <div class="hero-content">
+      <h1>🐣 Secteur Aviculture</h1>
+      <p>Incubation, élevage et transfert maîtrisé des poussins</p>
+      <a href="#galerie" class="cta-button">Voir nos installations</a>
+    </div>
+  </section>
+
+  <!-- Présentation -->
+  <section class="sector-description">
+    <h2>Notre chaîne avicole</h2>
+    <p>
+      Le Centre Albert Einstein développe une filière avicole structurée autour de deux sites :
+      <strong>Messassi (Quartier Blanc)</strong>, où les œufs sont incubés et les poussins élevés jusqu’à 21 jours,
+      et <strong>Nyomo</strong>, où ils poursuivent leur croissance dans des fermes modernes. Ce système permet un suivi rigoureux et une production durable.
+    </p>
+    <ul class="highlights">
+      <li>🥚 Incubation contrôlée à Messassi</li>
+      <li>🐥 Élevage des poussins jusqu’à 21 jours</li>
+      <li>🚚 Transfert vers Nyomo pour la phase d’engraissement</li>
+      <li>🏡 Fermes avicoles installées et gérées par nos équipes</li>
+    </ul>
+  </section>
+
+  <!-- Lecteur multimédia -->
+  <section id="galerie" class="media-slider">
+    <h2>🎬 Galerie Aviculture 1</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+
+        <!-- Image Postimages -->
+        <div class="slide">
+          <img src="https://i.postimg.cc/xyz123/incubateur-messassi.jpg" alt="Incubateur à Messassi">
+        </div>
+
+        <!-- Vidéo YouTube -->
+        <div class="slide">
+          <iframe src="https://www.youtube.com/embed/VID_AVICULTURE_1" allowfullscreen></iframe>
+        </div>
+
+        <!-- Image Postimages -->
+        <div class="slide">
+          <img src="https://i.postimg.cc/abc456/poussins-21jours.jpg" alt="Poussins de 21 jours">
+        </div>
+
+        <!-- Vidéo YouTube -->
+        <div class="slide">
+          <iframe src="https://www.youtube.com/embed/VID_AVICULTURE_2" allowfullscreen></iframe>
+        </div>
+
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+<!-- Appel à l’action -->
+
+  <section class="sector-contact">
+  <h2>Développez votre ferme avicole</h2>
+  <p>Que vous soyez porteur de projet ou éleveur confirmé, notre équipe vous accompagne dans la mise en place d’installations avicoles modernes, de l’incubation à l’engraissement.</p>
+
+  <div style="height: 100px; background-image: url('https://i.postimg.cc/xyz123/poussins-bg.jpg'); background-size: cover; background-position: center; opacity: 0.05;"></div>
+
+  <a href="contact.html#contact-form" class="cta-button">Nous contacter</a>
+</section>
+
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Centre Albert Einstein – Secteur Aviculture. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Script du lecteur -->
+  <script>
+document.querySelectorAll('.media-slider').forEach((slider) => {
+  const track = slider.querySelector('.slider-track');
+  const slides = slider.querySelectorAll('.slide');
+  const nextBtn = slider.querySelector('.next');
+  const prevBtn = slider.querySelector('.prev');
+  let index = 0;
+
+  const updateSlide = () => {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+});
+</script>
+
+</body>
+</html>

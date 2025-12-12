@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog & Nouveautés | Centre Albert Einstein</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+    }
+    .blog-post {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .blog-post:hover {
+      transform: scale(1.02);
+    }
+    .blog-post img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 20px;
+    }
+    .post-content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00b894;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="Acceuil.html">
+        <img src="videos/FENAP LOGO.png" alt="Logo Centre Albert Einstein" style="height: 60px;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="Acceuil.html">Accueil</a></li>
+        <li><a href="secteurs.html">Secteurs</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Bannière -->
+  <section class="page-banner parallax">
+    <h1>📰 Blog & Nouveautés</h1>
+    <p>Suivez les dernières actualités de chaque secteur du Centre Albert Einstein</p>
+  </section>
+
+<!-- Vidéo d’arrière-plan -->
+<section class="hero-section">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="videos/3.mp4" type="video/mp4">
+    <source src="videos/3.webm" type="video/webm">
+    Votre navigateur ne supporte pas la vidéo HTML5.
+  </video>
+  <div class="hero-content">
+    <h1>Bienvenue Au CENTRE ALBERT EINSTEIN</h1>
+    <p>Innovation. Polyvalence. Excellence.</p>
+    <a href="#secteurs" class="cta-button">Explorer nos secteurs</a>
+  </div>
+</section>
+
+
+
+  
+  <!-- Grille d’articles -->
+  <section id="archives" class="articles-masonry">
+
+    <!-- Industrie -->
+    <article class="article-card industrie">
+      <a href="https://sportenun.info/fenap-velo-ac-abdouraman-amadou-brille-avant-la-transca/">
+        <div class="card-overlay">
+          <div class="card-tags">
+            <span class="tag">🚴🏽‍♂️ FENAP Vélo</span>
+            <span class="tag date">8 Novembre 2025</span>
+          </div>
+          <h2><strong>Aperçu :</strong> Abdourahman Amadou du Progiciel Vélo Club a remporté la dernière étape de « Ça me dit vélo »,
+          signant sa 7e victoire consécutive et se préparant pour la Transrégionale Camerounaise.</h2>
+          <p></p>
+        </div>
+      </a>
+    </article>
+
+    <!-- Aviculture -->
+    <article class="article-card aviculture">
+      <a href="https://sportenun.info/flavien-guetsa-kamanou-ce-nest-pas-evident-dorganiser-une-transca/">
+        <div class="card-overlay">
+          <div class="card-tags">
+            <span class="tag">🚴🏽‍♂️ FENAP Vélo</span>
+            <span class="tag date">8 Novembre 2025</span>
+          </div>
+          <h2><strong>Aperçu :</strong> Flavien Guetsa Kamanou explique les défis liés à l’organisation de la Transca,
+          soulignant les contraintes logistiques et humaines</h2>
+          <p>.</p>
+        </div>
+      </a>
+    </article>
+
+    <!-- Pisciculture -->
+    <article class="article-card pisciculture">
+      <a href="http://www.mbolocameroon.com/2025/11/10/cyclisme-8e-ca-me-dit-velo-les-leaders-consolident-leur-trophee/">
+        <div class="card-overlay">
+          <div class="card-tags">
+            <span class="tag">🚴🏽‍♂️ FENAP Vélo</span>
+            <span class="tag date">8 Novembre 2025</span>
+          </div>
+          <h2><strong>Aperçu :</strong> Les leaders du cyclisme consolident leur trophée lors de la 8e étape de « Ça me dit vélo »,
+          confirmant leur domination.</h2>
+          
+        </div>
+      </a>
+    </article>
+
+    <!-- Garage -->
+    <article class="article-card garage">
+      <a href="https://afrikinfo.net/cyclisme-fenap-velo-ac-abdourahman-auteur-du-8e-sprint-triomphal/">
+        <div class="card-overlay">
+          <div class="card-tags">
+            <span class="tag">🚴🏽‍♂️ FENAP Vélo</span>
+            <span class="tag date">8 Novembre 2025</span>
+          </div>
+          <h2><strong>Aperçu :</strong> Abdourahman Amadou signe un 8e sprint triomphal, confirmant sa suprématie dans la compétition cycliste.</h2>
+          
+        </div>
+      </a>
+    </article>
+
+    <!-- Cyclisme -->
+    <article class="article-card cyclisme">
+      <a href="https://afriksportsmagazine.com/cyclisme-abdourahman-amadou-termine-en-beaute/" target="_blank" rel="noopener noreferrer">
+        <div class="card-overlay">
+          <div class="card-tags">
+            <span class="tag">🚴🏽‍♂️ FENAP Vélo</span>
+            <span class="tag date">8 Novembre 2025</span>
+          </div>
+          <h2><strong>Aperçu :</strong> Le coureur camerounais a remporté la dernière étape de « Ça me dit vélo » à Ngousso,
+          signant sa 7e victoire consécutive et se préparant pour la 14e édition de la Transrégionale Camerounaise.</h2>
+          
+        </div>
+      </a>
+    </article>
+
+  </section>
+
+  <!-- Lien vers les archives -->
+  <section class="archive-link">
+    <a href="Articles.html" class="cta-button">📚 Voir tous les articles</a>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Centre Albert Einstein – Blog & Nouveautés. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
